@@ -1,0 +1,19 @@
+<?php
+$name = $_POST['name'];
+$visitor_email = $_POST['Email'];
+$msg =$_POST['message']
+
+$email_from = "710mahek@gmail.com";
+
+$email_subject = "New Form Submission";
+
+$email_body = "User Name: $name. \n User Email: $visitor_email. \n User Message: $msg. \n";
+
+$to = "2704lisa@gmail.com";
+$headers = "From: $email_from \r\n";
+$headers = "Reply-To: $visitor_email \r\n";
+
+mail($to, $email_subject,$email_body,$headers);
+header("Location: index.html");
+ 
+?>
